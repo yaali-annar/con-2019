@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>PAWAI 2019</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="black">
+        <link rel="stylesheet" href="/resource/style/fontawesome.css"/>
+        <link rel="stylesheet" href="/resource/style/icofont.css"/>
+        <link rel="stylesheet" href="/resource/style/slick.css"/>
+        <link rel="stylesheet" href="/resource/style/slick-theme.css"/>
+        <link rel="stylesheet" href="/resource/style/main.css"/>
+
+        <script src="config.js"></script>
+        <script src="main.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js?onload=globalLoader"></script>
+
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/resource/image/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/resource/image/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/resource/image/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/resource/image/favicon-16x16.png" sizes="16x16" />
+        <meta name="application-name" content="PAWAI"/>
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="msapplication-TileImage" content="/resource/image/mstile-144x144.png" />
+
+
+    </head>
+    <body id="bootstrap-override">
+
+        <div id="loading-overlay">
+            <div id="loading-message">
+                <p class="align-center font-family-bebas font-size-400" data-text-id="state.loading"></p>
+                <img src="/resource/image/loading-bar.gif" />
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-toggleable-lg navbar-dark" role="navigation">
+            <a class="navbar-brand ml-5 " href="#" onclick="window.page.open('home')">
+                <img class="logo-header d-none d-md-block" src="resource/image/logo-header.png">
+                <img class="logo-header d-block d-md-none" src="resource/image/logo-header-mobile.png">
+            </a>
+
+            <span id="language-switcher">
+                <button type="button" class="btn btn-sm btn-dark" onclick="window.language.switch('id')">ID</button > 
+                <button type="button" class="btn btn-sm btn-dark" onclick="window.language.switch('en')">EN</button >
+            </span>
+            <button id="navbar-toggler" class="navbar-toggler" type="button" 
+                    data-toggle="collapse" 
+                    data-target="#navbar" 
+                    aria-controls="navbar" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ml-5 mr-5" id="navbar">
+                <ul id="navbar-list" class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link">Loading Menu ...</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="police-line"></div>  
+
+        <div id="page-container" class="container-fluid">
+        </div>
+
+        <div class="police-line"></div>  
+
+        <div id="footer" class="align-center container-fluid  p-3">
+            <div class="row">
+                <div class="col-md-4 center">
+                    <img src="/resource/image/logo-footer.png" height="80"/>
+                </div>
+                <div id="disclaimer" class="col-md-4 center">
+                    <p><strong>Not to go on all-fours; that is the Law. Are we not Men?</strong></p>
+                    <p><a href="https://youtu.be/GV73fmJ4t30" class="text-box text-box-green font-size-125"><img src="/resource/image/arrow-left-white-green.png" style="height:1.25rem"/>Pawai Village</a></p>
+                </div>
+                <div class="col-md-4 align-center">
+                    <div class="row">
+                        <div class="col-lg-4"><div class="btn footer-social-media"><i class="fab fa-facebook"></i> PAWAI.ID</div></div>
+                        <div class="col-lg-4"><div class="btn footer-social-media"><i class="fab fa-instagram"></i> PAWAI_ID</div></div>
+                        <div class="col-lg-4"><div class="btn footer-social-media"><i class="fab fa-twitter"></i> PAWAI_ID</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

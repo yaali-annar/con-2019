@@ -1,0 +1,563 @@
+/* Color Variable */
+
+@color-yellow: #ffd91a;
+@color-red: #d92121;
+
+/* Font */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),   
+        local('MaterialIcons-Regular'),
+        url(../font/MaterialIcons-Regular.woff2) format('woff2'),
+        url(../font/MaterialIcons-Regular.woff) format('woff'),
+        url(../font/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    font-style : normal;
+    font-weight: 300;
+    src:
+        local('Bebas Neue'),
+        url(../font/BebasNeue-Regular.woff2) format('woff2'),
+        url(../font/BebasNeue-Regular.woff) format('woff'),
+        url(../font/BebasNeue-Regular.ttf) format('truetype'),        
+        url(../font/BebasNeue-Regular.otf) format('otf'),
+        url(../font/BebasNeue-Regular.ttf) format('truetype');
+}
+
+
+@font-face {
+    font-family: 'roboto';
+    font-style : normal;
+    font-weight: 400;
+    src:
+        url('../font/Roboto-Regular.woff2') format('woff2'), 
+        url('../font/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'roboto';
+    font-style : normal;
+    font-weight: 700;
+    src:
+        url('../font/Roboto-Bold.woff2') format('woff2'), 
+        url('../font/Roboto-Bold.ttf'  ) format('truetype');
+}
+
+/* Sticky Footer */
+#page-container {
+    overflow:auto;
+}
+
+#footer {
+    position: relative;
+    clear:both;
+    padding-top:1rem;
+    padding-bottom:1rem;
+} 
+
+/* General Layouting Classes */
+.allcaps {
+    text-transform: uppercase;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.centered-element {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centered-absolutely {
+    max-height: 100%;  
+    max-width: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Font Size */
+
+.font-size-125 {
+    font-size: 1.25rem;
+}
+
+.font-size-150 {
+    font-size: 1.5rem;
+}
+
+.font-size-200 {
+    font-size: 2rem;
+}
+
+.font-size-300 {
+    font-size: 3rem;
+}
+
+.font-size-400 {
+    font-size: 4rem;
+}
+
+.font-size-500 {
+    font-size: 5rem;
+}
+
+
+/*Font Weight*/
+
+.font-weight-300 {
+    font-weight: 300;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+.material-icons {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    direction: ltr;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-feature-settings: 'liga';
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+/* Override Bootstrap */
+
+#bootstrap-override {
+    font-family: 'roboto';
+    font-weight: 400;
+    font-size: 1rem;
+    background-color: #1a1a1a;
+    color: white;
+
+    a {
+        color: white;
+    }
+
+    button{
+        font-weight: 700;
+    }
+
+    form {
+        input[type=checkbox] {
+            /* Double-sized Checkboxes */
+            -ms-transform: scale(2); /* IE */
+            -moz-transform: scale(2); /* FF */
+            -webkit-transform: scale(2); /* Safari and Chrome */
+            -o-transform: scale(2); /* Opera */
+        }
+
+        .form-check {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            color: white;
+            background-color: #444444;
+            border-radius: 0;
+            border-width: 0;
+        }
+
+        .form-control.invalid-field {
+            border-width: 2px;
+            border-color: @color-red;
+        }
+
+        .form-control-plaintext{
+            color: white;
+        }
+
+        .input-group-text {
+            border-radius: 0;
+        }
+    }
+
+    hr {
+        display: block;
+        height: 0.1rem;
+        border: 0;
+        border-top: 0.1rem solid white;
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    hr.hr-black {
+        border-top: 0.1rem solid black;
+    }
+
+    label { 
+        i {
+            width:1.5rem;
+        }
+    }
+
+    nav {
+        .nav-item {
+            margin-right: 0.5rem;
+        }
+
+        .nav-link {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            background-color: white;
+            letter-spacing: 0.05rem;
+            color: black;
+            padding-top: 0.2rem;
+            padding-bottom: 0;
+            font-family: 'Bebas Neue';
+            font-size: 1.2rem;
+            width: 100%;
+            font-weight: 400;
+        }
+
+        .nav-link.selected {
+            background-color: grey;
+        }    
+
+        .navbar-nav > li.nav-right {
+            float: right;
+            display: inline-block;
+        }
+
+        [data-text-id="menu.entry"]{
+            background-color: #37b049;
+            color: white;
+        }
+
+        [data-text-id="menu.logOut"]{
+            background-color: @color-red;
+            color: white;
+        }
+    }
+
+    strong {
+        font-family: 'roboto';
+        font-weight: 700;
+    }
+
+    /* Class Specific */
+    .background-color-white{
+        background-color: white;
+    }
+    .background-color-grey{
+        background-color: #444444;
+    }
+
+    .background-color-yellow{
+        background-color: @color-yellow;
+    }
+
+    /* Button Styling*/
+    .btn {
+        border-radius: 0;
+    }
+
+    .btn-main {
+        color: black;
+        border-radius: 0;
+        background-color: #ffd91a;
+    }
+
+    .btn-secondary {
+        color: black;
+        border-radius: 0;
+        background-color: #bf9e39;
+    }
+
+    /* Text Color */
+    .color-black{ 
+        color: black;
+    }
+
+    .color-yellow{ 
+        color: @color-yellow;
+    }
+
+    .color-red{ 
+        color: @color-red;
+    }
+
+    /* Font Families*/
+    .font-family-bebas{ 
+        font-family: 'Bebas Neue';
+    }
+
+    .hidden {
+        display:none!important;
+    }
+
+    .page-title {
+        .font-family-bebas();
+        .color-black();
+        font-size: 3rem;
+        margin-bottom: 0.75rem;
+        padding-top: .25rem;
+        padding-left: 3rem;
+        background-color: @color-yellow;
+    }
+
+    .section-title { 
+        .font-family-bebas();
+        .color-black();
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        padding-top: 0.31rem;
+        padding-left: 2rem;
+        background-color: #bf9e39;
+
+        i { 
+            padding: 0.31rem 0.38rem 0.19rem 0.31rem;
+            margin-right: 0.25rem;
+        }
+        span { 
+            margin-right: 1rem;
+            padding: 0.25rem 0 0 0;
+        }
+    }
+
+    /* Third Party */
+    .bootstrap-datetimepicker-widget {
+        table{
+            color: black;
+            border: 0;
+
+            td{
+                border: 0;
+            }
+
+
+            thead th{
+                border: 0;
+            }
+        }
+
+        .fa{
+            color: black;
+        }
+    }
+
+    .slick-slide {
+        height: auto; 
+    }
+
+    .slick-dots li button:before{
+        color: white;
+    }
+}
+
+#bootstrap-override .container-fluid{
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#bootstrap-override .footer-social-media {
+    background-color: white;
+    color: black;
+    font-family: 'Bebas Neue';
+    font-size: 1.2rem;
+    width: 100%;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.1rem;
+}
+
+
+
+/* Navigation*/
+
+#bootstrap-override .text-box{
+    font-family: 'Bebas Neue';
+    letter-spacing: 0.05rem;
+    padding: 0.5rem;
+    width: fit-content;
+}
+
+#bootstrap-override .text-box-bordered{
+    border-style: solid;
+    border-width: 0.15rem;
+}
+
+/* Textbox colors */
+#bootstrap-override .text-box-green {
+    background-color: #37b049;
+    color:white;
+    border-color: black;
+}
+
+#bootstrap-override .text-box-red {
+    background-color: @color-red;
+    color:white;
+    border-color: white;
+}
+
+#bootstrap-override .text-box-white{
+    background-color: white;
+    color:black;
+    border-color: black;
+}
+
+#bootstrap-override .text-box-yellow{
+    background-color: #ffd91a;
+    color:black;
+    border-color: black;
+}
+
+#bootstrap-override .underline-yellow{
+    text-decoration: underline double #ffd91a;
+}
+
+
+#loading-overlay {
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+}
+
+#language-switcher a {
+    background-color: #666;
+    color:white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.4rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-family: 'Bebas Neue';
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+}
+
+#loading-message {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-header {
+    height: 4rem;
+}
+
+/* Specific Element*/
+
+#hotel-room-photo {
+    min-height: 30rem;
+    background-image: url("../image/hotel-room-short.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#hotel-room-information {
+    color: black;
+    background-color: #f3da1e;
+}
+
+
+#poster {
+    height: 37rem;
+    background-image: url("../image/poster.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#poster-mobile {
+    height: 43rem;
+    background-image: url("../image/poster-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#receipt #receipt-detail {
+    background-color: white;
+    color: black;
+}
+
+#venue-photo {
+    min-height: 34rem;
+    background-image: url("../image/venue-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#venue-map {
+    height: 30rem;
+}
+
+#venue-information {
+    background-color: #f3da1e;
+}
+
+
+.police-line{
+    background-size: contain;
+    background-image: url("../image/police-line-segment.png");
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 1rem;
+}
+
+/* Ticket */
+
+#ticket-tiers {
+    max-width: 69rem;
+}
+
+.ticket-tier{
+    max-width: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    img{
+        width: 100%;
+    }
+    img.hidden{
+        display:none;
+    }
+}
+
+
+.recaptcha-container {
+    width: 304px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+

@@ -1,0 +1,254 @@
+<main data-controller="edit-data,change-password">
+    <div class="row my-3">
+        <div class="offset-lg-3 col-lg-6 offset-md-2 col-md-8">
+            <form id="form-edit-registrant">
+                <section id="registrant-data">
+                    <h1 class="page-title my-4">
+                        <span class="lang lang-en">Edit Data</span>
+                        <span class="lang lang-id">Ubah Data</span>
+                    </h1>
+                    <div class="px-3">
+                        <div class="form-group row">
+                            <label id="register-label-email" class="col-sm-4 col-form-label">
+                                <i class="fas fa-at"></i>
+                                <span class="lang lang-en">Email Address</span>
+                                <span class="lang lang-id">Alamat Surel</span>
+                            </label>
+                            <div class="col-sm-8">
+                                <input 
+                                    data-name="email"
+                                    type="email" 
+                                    class="form-control-plaintext" 
+                                    data-required="false"
+                                    readonly
+                                    />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label id="register-label-preferred-name" class="col-sm-4 col-form-label">
+                                <i class="far fa-id-badge"></i>
+                                <span class="lang lang-en">Preferred Name</span>
+                                <span class="lang lang-id">Nama Pilihan</span>
+                            </label>
+                            <div class="col-sm-8">
+                                <input data-name="preferredName" type="text"  data-required="true"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label id="register-label-legal-name" class="col-sm-4 col-form-label">
+                                <i class="fas fa-balance-scale"></i>
+                                <span class="lang lang-en">Legal Name</span>
+                                <span class="lang lang-id">Nama Resmi</span>
+                            </label>
+                            <div class="col-sm-8">
+                                <input data-name="legalName" type="text" data-required="true"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label id="register-label-birth-date" class="col-sm-4 col-form-label">
+                                <i class="fas fa-birthday-cake"></i>
+                                <span class="lang lang-en">Birth Date</span>
+                                <span class="lang lang-id">Tanggal Lahir</span>
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" data-name="birthDate"  data-required="true"
+                                       data-type="date"
+                                       data-max-date="2004-07-26"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="ticket-tier-label" class="col-sm-4 col-form-label">
+                                <i class="fas fa-ticket-alt"></i>
+                                <span class="lang lang-en">Ticket Tier</span>
+                                <span class="lang lang-id">Jenjang Ticket</span>
+                            </label>
+                            <div class="col-sm-8">
+                                <select data-name="ticketTier.id"  >
+                                    <option value="1">Essential</option>
+                                    <option value="2">Sponsor</option>
+                                    <option value="3">Super Sponsor</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="offset-sm-4 col-sm-8">
+                                <div class="form-check ml-2">
+                                    <input class="form-check-input" type="checkbox" value="1" data-name="dinner">
+                                    <label class="form-check-label ml-2" >
+                                        <span class="lang lang-en">
+                                            I am joining the afterhour event
+                                        </span>
+                                        <span class="lang lang-id">
+                                            Saya mengikuti acara pasca PAWAI
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="offset-sm-4 col-sm-8">
+                                <div class="form-check ml-2">
+                                    <input class="form-check-input" type="checkbox" value="1" data-name="foreigner">
+                                    <label class="form-check-label ml-2" >
+                                        <span class="lang lang-en">
+                                            I am not a citizen of Indonesia.
+                                        </span>
+                                        <span class="lang lang-id">
+                                            Saya bukan warga negara Indonesia
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </section>
+
+                <section id="attendee-data" class="hidden">
+                    <h2 class="section-title my-4">
+                        <i class="fas fa-plus-square"></i>
+                        <span class="lang lang-en">Additional Data</span>
+                        <span class="lang lang-id">Data Tambahan</span>
+                    </h2>
+                    <div class="px-3">
+                        <div class="form-group row ticket-tier-2 ticket-tier-3 hidden">
+                            <label class="col-sm-4 col-form-label">
+                                <i class="fas fa-tshirt"></i>
+                                <span class="lang lang-en">Shirt Size</span>
+                                <span class="lang lang-id">Ukuran Kaus</span>
+                            </label>
+                            <div class="col-sm-8">
+                                <select data-name="attendee.shirtSize.id" data-required="false"  >
+                                    <option value="">Please Choose</option>
+                                    <option value="1">S</option>
+                                    <option value="2">M</option>
+                                    <option value="3">L</option>
+                                    <option value="4">XL</option>
+                                    <option value="5">XXL</option>
+                                    <option value="6">XXXL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row ticket-tier-2 ticket-tier-3 hidden">
+                            <label class="col-sm-4 col-form-label ticket-tier-2 hidden">
+                                <i class="far fa-user-circle"></i>
+                                <span class="lang lang-en">Badge Picture</span>
+                                <span class="lang lang-id">Gambar Lencana</span>
+                            </label>
+                            <label class="col-sm-4 col-form-label ticket-tier-3 hidden">
+                                <i class="far fa-user-circle"></i>
+                                <span class="lang lang-en">Character Reference</span>
+                                <span class="lang lang-id">Rujukan Watak</span>
+                            </label>
+                            <div class="col-sm-8">
+                                <textarea data-name="attendee.characterUrl" data-required="false"  ></textarea>
+                                <small class="ticket-tier-2 hidden">
+                                    <span class="lang lang-en">
+                                        Insert an URL to picture that will be incorporated into your badge.
+                                    </span>
+                                    <span class="lang lang-id">
+                                        Masukan URL untuk gambar yang akan disertakan ke dalam lencana Anda.
+                                    </span>
+                                </small>
+                                <small class="ticket-tier-3 hidden">
+                                    <span class="lang lang-en">
+                                        Insert an URL to your character reference that will be drawn by our artist.
+                                    </span>
+                                    <span class="lang lang-id">
+                                        Masukan URL untuk rujukan watak yang akan digambar oleh seniman kami.
+                                    </span>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label id="emergency-contact-label" class="col-sm-4 col-form-label">
+                                <i class="fas fa-hospital"></i>
+                                <span class="lang lang-en">Emergency Contact</span>
+                                <span class="lang lang-id">Kontak Darurat</span>
+                            </label>
+                            <div class="col-sm-8">
+                                <textarea data-name="attendee.emergencyContact"  data-required="false"  >
+                                </textarea>
+                                <small  id="emergency-contact-explanation" >
+                                    This number will be called when there's an emergency happening to you.
+                                    Please give us their number, name, and relation to you.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="offset-sm-4 col-sm-8">
+                                <div class="form-check ml-2">
+                                    <input class="form-check-input" type="checkbox" value="1" data-required="false" data-name="attendee.bringFursuit">
+                                    <label class="form-check-label ml-2" >
+                                        <span class="lang lang-en">
+                                            I will bring a fursuit
+                                        </span>
+                                        <span class="lang lang-id">
+                                            Saya akan membawa fursuit
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="row mt-4">
+                    <div class="offset-sm-4 col-sm-8">
+                        <button id="button-save-data" type="button" class="btn btn-lg btn-main ">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+            <form id="form-change-password">
+                <h1 class="section-title my-4">
+                    <i class="icofont-key"></i>
+                    <span class="lang lang-en">Change Password</span>
+                    <span class="lang lang-id">Ubah Katasandi</span>
+                </h1>
+                <div class="px-3">
+                    <div class="form-group row">
+                        <label id="register-label-email" class="col-sm-4 col-form-label">
+                            <i class="icofont-ui-previous"></i>
+                            <span class="lang lang-en">Old Password</span>
+                            <span class="lang lang-id">Katasandi Lama</span>
+                        </label>
+                        <div class="col-sm-8">
+                            <input  data-name="oldPassword" type="password"  data-required="true"
+                                    />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label id="register-label-email" class="col-sm-4 col-form-label">
+                            <i class="icofont-ui-next"></i>
+                            <span class="lang lang-en">New Password</span>
+                            <span class="lang lang-id">Katasandi Baru</span>
+                        </label>
+                        <div class="col-sm-8">
+                            <input  data-name="newPassword" type="password"  data-required="true"
+                                    />
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="offset-sm-4 col-sm-8">
+                            <button id="button-change-password" type="button" class="btn btn-secondary">Change Password</button>
+                        </div>
+                    </div>
+
+                </div> 
+            </form>
+        </div>
+    </div>
+    <div class="row mt-3 align-center">
+        <div class="offset-lg-3 col-lg-6 offset-md-2 col-md-8">
+            <p>
+                This event is for people 14 years and older, additionally Those who are under 17 years and can't 
+                produce an ID are required to show a signed permit from their legal guardian.</p>
+            <p>
+                <a href="/static/documents/consent-form.pdf" id="consent-form-link">
+                    Click here to download the permit.
+                </a>
+            </p>
+        </div>
+    </div>
+</main>

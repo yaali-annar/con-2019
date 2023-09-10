@@ -1,0 +1,260 @@
+<main data-controller="receipt,room-reservation">
+    <div id="receipt" class="row">
+        <div class="offset-md-4 col-md-4 pt-4 px-0">
+            <div class="row pb-3">
+                <button id="button-show-room" class="btn btn-main btn-lg centered-element">
+                    <span class="lang lang-en">Go to Room Reservation</span>
+                    <span class="lang lang-id">Ke Penyewaan Kamar Hotel</span>
+                </button>
+            </div>
+            <div id="receipt-detail">
+                <table class="table table-borderless mb-0">
+                    <tr>
+                        <td class="align-middle align-center" style="color:black">
+                            <p class="font-family-bebas font-size-400" style="margin-bottom: 0"># <span id="receipt-attendee-id"></span></p>
+                            <p class="font-family-bebas font-size-200" style="margin-bottom: 0" id="receipt-preferred-name"></p>
+                        </td>
+                        <td class="align-center"> 
+                            <img src="resource/image/receipt-approved.png" style="max-width: 10rem"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="background-color-grey py-3 px-5 align-center">
+                <table class="table table-borderless table-sm mb-0  font-size-100">
+                    <tr>
+                        <td class="align-center"><i class="fas fa-balance-scale"></i> </td>
+                        <td><span id="receipt-legal-name"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="align-center"><i class="fas fa-birthday-cake"></i> </td>
+                        <td><span id="receipt-birth-date"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="align-center"><i class="icofont-soft-drinks"></i> </td>
+                        <td><span id="receipt-dinner"></span></td>
+                    </tr>
+                    <tr id="shirt-size" class="hidden">
+                        <td class="align-center"><i class="fas fa-tshirt"></i></td>
+                        <td><span id="receipt-shirt-size"></span></td>
+                    </tr>
+                </table>
+            </div>
+            <img id="receipt-image-1" class="receipt-image hidden full-width" src="resource/image/receipt-essential.png"/>
+            <img id="receipt-image-2" class="receipt-image hidden full-width" src="resource/image/receipt-sponsor.png"/>
+            <img id="receipt-image-3" class="receipt-image hidden full-width" src="resource/image/receipt-super-sponsor.png"/>
+        </div>
+    </div>
+    <div id="room"  class="row hidden">
+        <div class="offset-lg-3 col-lg-6 offset-md-2 col-md-8 mt-3 mb-5">
+            <div class="row pb-3">
+                <button id="button-show-receipt" class="btn btn-main btn-lg centered-element">
+                    <span class="lang lang-en">View PAWAI Receipt</span>
+                    <span class="lang lang-id">Lihat Kwitansi PAWAI</span>
+                </button>
+            </div>
+
+            <p class="section-title">
+                <i class="fas fa-hotel"></i>
+                <span class="lang lang-en">Hotel Room</span>
+                <span class="lang lang-id">Kamar Hotel</span>
+            </p>
+            <img src="resource/image/hotel-room-long.jpg" class="full-width"/>
+
+            <div class="mx-3">
+                <p class="my-3">
+                    The venue has graciously offered PAWAI attendees a special room rate. 
+                    If you're coming from afar, why not spend a night or two in Yello?
+                    Room reservation will be closed by <strong>2019 May 30th</strong>.
+                </p>
+
+                <div class="row">
+                    <div class="col align-center">
+                        <p class="font-family-bebas mb-0">
+                            <span class="font-size-200">IDR</span><span class="font-size-300"> 485 </span><span class="font-size-200">000</span>
+                        </p>
+                        <p class="font-family-bebas">
+                            <span class="font-size-200">/ Night</span>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <table class="table table-borderless table-sm">
+                            <tr>
+                                <td class="font-size-200"><i class="icofont-ui-calendar"></i></td>
+                                <td>Valid only for a stay between 2019 July 26th to 30th.</td>
+                            </tr> 
+                            <tr>
+                                <td class="font-size-200"><i class="icofont-paw"></i></td>
+                                <td>Only applies for PAWAI attendees.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-size-200"><i class="icofont-fork-and-knife"></i></td>
+                                <td>Includes breakfast for 2 people.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <form id="form-room-reservation" class="my-3 mx-3">
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Check In                    
+                    </label>
+                    <div class="col-sm-8">
+                        <input id="check-in-at"  
+                               type="text"
+                               data-name="checkInAt"  
+                               data-required="true" 
+
+                               data-type="date"
+                               data-min-date="2019-07-26"
+                               data-max-date="2019-07-29"
+
+
+                               />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Check Out                   
+                    </label>
+                    <div class="col-sm-8">
+                        <input  id="check-out-at"  
+                                type="text"
+                                data-name="checkOutAt"  
+                                data-required="true" 
+
+                                data-type="date"
+                                data-min-date="2019-07-27"                               
+                                data-max-date="2019-07-30"
+                                />
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">
+                        <i class="fas fa-bed"></i>
+                        <span class="lang lang-en">Bed Type</span>
+                        <span class="lang lang-id">Jenis Ranjang</span>
+                    </label>
+                    <div class="col-sm-8">
+                        <select data-name="bedType" data-required="true">
+                            <option value="">Please Select</option>
+                            <option value="1">Twin Bed</option>
+                            <option value="2">Large Single Bed</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">
+                        <i class="icofont-ui-calendar"></i>
+                        Length of Stay                   
+                    </label>
+                    <div class="col-sm-8">
+                        <input id="stay-length" class="form-control-plaintext" value="-" disabled />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">
+                        <i class="icofont-bill-alt"></i>
+                        Total Price                  
+                    </label>
+                    <div class="col-sm-8">
+                        <input id="total-price" class="form-control-plaintext" value="-" disabled />
+                    </div>
+                </div>
+            </form>
+
+
+            <form id="form-room-payment" class="mt-5 mb-3 hidden">
+                <p class="section-title">
+                    <i class="icofont-pay"></i>
+                    <span class="lang lang-en">Hotel Room Payment</span>
+                    <span class="lang lang-id">Pembayaran Kamar Hotel</span>
+                </p>
+
+                <div class="px-3">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td class="align-center align-middle"> 
+                                <p class="font-family-bebas mb-0">
+                                    <span class="font-size-200">IDR</span><span id="room-reservation-total" class="font-size-300"></span><span class="font-size-200"> 000</span>
+                                </p>
+                                <p class="font-family-bebas font-size-200" >
+                                    <span id="room-reservation-stay-length" ></span>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p id="room-payment-description">
+                        After you perform a payment, please confirm your payment using the form bellow.
+                    </p>
+
+                    <p id="room-payment-please-wait" class="hidden">
+                        Thank you for confirming your payment. Please wait while we verify your confirmation claim.
+                    </p>
+
+                    <p id="room-payment-approved" class="hidden">
+                        Your payment has been approved. Thank you for reserving a room.
+                    </p>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4">
+                            <i class="icofont-bank-alt"></i>
+                            <span class="lang lang-en">Bank Name</span>
+                            <span class="lang lang-id">Nama Bank</span>
+                        </label>
+                        <div class="col-sm-8">
+                            <input type="text" data-name="bankName" data-required="true"/>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4" id="label-account-number">
+                            <i class="fas fa-hashtag"></i>
+                            <span class="lang lang-en">Account Number</span>
+                            <span class="lang lang-id">Nomor Rekening</span>
+                        </label>
+                        <div class="col-sm-8">
+                            <input type="text" data-name="accountNumber" data-required="true"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4">
+                            <i class="icofont-businesswoman"></i>
+                            <span class="lang lang-en">Account Holder Name</span>
+                            <span class="lang lang-id">Nama Pemegang Rekening</span>
+                        </label>
+
+                        <div class="col-sm-8">
+                            <input type="text" data-name="accountHolderName" data-required="true"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4">
+                            <i class="icofont-ui-clock"></i>
+                            <span class="lang lang-en">Time of Transaction</span>
+                            <span class="lang lang-id">Waktu Transaksi</span>
+                        </label>
+                        <div class="col-sm-8">
+                            <input id="transaction-time" 
+                                   type="text"
+                                   data-type="datetime"
+                                   data-name="transactionTime"
+                                   data-required="true"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

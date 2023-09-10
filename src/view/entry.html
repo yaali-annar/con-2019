@@ -1,0 +1,254 @@
+<main data-controller="login,register">
+    <div class="row mt-3">
+        <div class="offset-lg-3 col-lg-6 offset-md-2 col-md-8">
+            <p class="page-title">
+                <span class="lang lang-en">Entry</span>
+                <span class="lang lang-id">Masuk</span>
+            </p>
+        </div>
+    </div>
+
+    <form id="form-entry" class="p-3">
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6 offset-md-2 col-md-8">
+                <div id="button-entry-switcher" class="form-group row hidden">
+                    <div class="offset-sm-4 col-sm-8">
+                        <button type="button" id="link-register" class="btn btn-sm btn-dark login-element">
+                            <span class="lang lang-en">Not yet registered? Click or tap here.</span>
+                            <span class="lang lang-id">Belum mendaftar? Klik atau ketuk disini.</span>                        
+                        </button>
+                        <button type="button"  id="link-login" class="btn btn-sm btn-dark registration-element hidden">
+                            <span class="lang lang-en">Already registered? Click or tap here.</span>
+                            <span class="lang lang-id">Sudah mendaftar? Klik atau ketuk disini.</span>                        
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">
+                        <i class="fas fa-at"></i>
+                        <span class="lang lang-en">Email Address</span>
+                        <span class="lang lang-id">Alamat Surel</span>
+                    </label>
+                    <div class="col-sm-8">
+                        <input data-name="email" type="email" data-required="true" />
+                        <small class="form-text">
+                            <span class="lang lang-en">We'll never share your email with anyone else.</span>
+                            <span class="lang lang-id">Kami tidak akan membagikan alamat surel Anda ke siapa pun.</span>
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">
+                        <i class="fas fa-key" style="width:1.5rem"></i>
+                        <span class="lang lang-en">Password</span>
+                        <span class="lang lang-id">Kata Sandi</span>
+                    </label>
+                    <div class="col-sm-8">
+                        <input data-name="password" type="password" data-required="true" />
+                        <small>
+                            <a id="link-forgot" class="login-element underline-yellow">
+                                <span class="lang lang-en">Forgot your password? Please click or tap here.</span>
+                                <span class="lang lang-id">Lupa kata sandi Anda? Klik atau ketuk disini.</span>                        
+                            </a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="registration-element hidden">
+            <div class="row">
+                <div class="offset-lg-3 col-lg-6 offset-md-2 col-md-8">
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">
+                            <i class="far fa-id-badge" style="width:1.5rem"></i>
+                            <span class="lang lang-en">Preferred Name</span>
+                            <span class="lang lang-id">Nama Pilihan</span>
+                        </label>
+                        <div class="col-sm-8">
+                            <input data-name="preferredName" data-required="true" type="text"/>
+                            <small class="form-text">
+                                <span class="lang lang-en">This name will be printed on your badge.</span>
+                                <span class="lang lang-id">Nama ini akan dicetak di lencana Anda.</span>
+                            </small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">
+                            <i class="fas fa-balance-scale"></i>
+                            <span class="lang lang-en">Legal Name</span>
+                            <span class="lang lang-id">Nama Resmi</span>
+                        </label>
+                        <div class="col-sm-8">
+                            <input type="text" data-name="legalName" data-required="true"/>
+                            <small class="form-text">
+                                <span class="lang lang-en">The name printed in your legal identification, 
+                                    we need this to authenticate you during the event.
+                                </span>
+                                <span class="lang lang-id">Nama yang tertera pada tanda pengenal anda, 
+                                    kami membutuhkannya untuk mengesahkan anda pada saat Acara.</span>
+                            </small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">
+                            <i class="fas fa-birthday-cake"></i>
+                            <span class="lang lang-en">Birth Date</span>
+                            <span class="lang lang-id">Tanggal Lahir</span>
+                        </label>
+                        <div class="col-sm-8">
+                            <input type="text" data-name="birthDate" data-required="true" 
+                                   data-type="date"
+                                   data-max-date="2005-07-26"
+                                   />
+                            <small class="form-text">
+                                <span class="lang lang-en">
+                                    We also need your birth date to authenticate you.
+                                </span>
+                                <span class="lang lang-id">
+                                    Kami juga membutuhkan tanggal lahir Anda untuk keperluan pengesahan.
+                                </span>
+                            </small>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="offset-sm-4 col-sm-8">
+                            <div class="form-check ml-2">
+                                <input class="form-check-input" type="checkbox" value="1" data-name="foreigner">
+                                <label class="form-check-label ml-2" >
+                                    <span class="lang lang-en">
+                                        I am not a citizen of Indonesia.
+                                    </span>
+                                    <span class="lang lang-id">
+                                        Saya bukan warga negara Indonesia
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>       
+            </div>
+
+            <div class="row mt-3 align-center">
+                <div class="offset-lg-3 col-lg-6 offset-md-2 col-md-8">
+                    <small>
+                        <span class="lang lang-en">
+                            This event is for people 14 years and older. Those who are under 17 years and can't 
+                            produce an ID are required to show a signed permit from their legal guardian.
+                        </span>
+                        <span class="lang lang-id">
+                            Acara ini untuk orang yang berusia 14 tahun ke atas. Mereka yang berusia di bawah 17 tahun dan tidak mempunyai 
+                            kartu pengenal diperlukan untuk menunjukkan izin yang ditandatangani dari wali mereka yang sah.                        
+                        </span>
+                    </small>
+                    <p class="mt-3">
+                        <a href="/resource/document/consent-form.pdf" target="_blank" class="btn btn-dark">
+                            <span class="lang lang-en">
+                                Click here to download the permit form.
+                            </span>
+                            <span class="lang lang-id">
+                                Klik di sini untuk mengunduh formulir izin.
+                            </span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-3 mb-3 align-center">
+                <div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10">
+                    <h2>Choose your ticket tier</h2>
+                </div>
+            </div>
+
+            <div class="px-4">
+                <div id="ticket-tiers" class="centered-element">
+                    <div>                    
+                        <div class="ticket-tier" data-ticket-tier-id="1">
+                            <img class="hidden selected" src="/resource/image/ticket-selection-essential.png" />
+                            <img class="unselected" src="/resource/image/ticket-selection-essential-unselected.png" />
+                        </div>
+                    </div>
+                    <div>                    
+                        <div class="ticket-tier" data-ticket-tier-id="2" >
+                            <img class="hidden selected" src="/resource/image/ticket-selection-sponsor.png" />
+                            <img class="unselected" src="/resource/image/ticket-selection-sponsor-unselected.png" />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ticket-tier" data-ticket-tier-id="3">
+                            <img class="hidden selected" src="/resource/image/ticket-selection-super-sponsor.png" />
+                            <img class="unselected" src="/resource/image/ticket-selection-super-sponsor-unselected.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input data-name="ticketTierId" type="hidden"/>
+
+            <div class="row mt-3">
+                <div class="offset-md-1 col-md-5 mb-3">
+                    <img id="afterhours-unselected" src="/resource/image/afterhours-selection-unselected.png" class="full-width"/>
+                    <img id="afterhours-selected" src="/resource/image/afterhours-selection.png" class="full-width hidden"/>
+                </div>
+                <div class="col-md-5">
+                    <span class="lang lang-en">
+                        The PAWAI event will take place from 10:00 to 18:00.
+                        However the venue also offers dinner on their rooftop restaurant: Peron.
+                        If you would like to spend your weekend dining on the hotel with a DJ.
+                        we can help you book a spot on the rooftop.
+                    </span>
+                    <span class="lang lang-id">
+                        Acara PAWAI akan berlangsung mulai pukul 10:00 hingga 18:00.
+                        Namun tempat ini juga menawarkan makan malam di restoran atap mereka: Peron.
+                        Jika Anda ingin menghabiskan akhir pekan Anda bersantap di hotel dengan ditemani DJ.
+                        kami dapat membantu Anda memesan tempat di atap.
+                    </span>
+                    <div class="form-check mt-5">
+                        <input id="dinner" class="form-check-input" type="checkbox" value="1" data-name="dinner">
+                        <label class="form-check-label ml-2">
+                            <span class="lang lang-en">
+                                I would like to book a spot
+                            </span>
+                            <span class="lang lang-id">
+                                Saya ingin memesan tempat
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="recaptcha-container my-4">
+                <div id="recaptcha"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2 login-element ">
+            <div class="offset-lg-3 col-lg-6 offset-md-2 col-md-8">
+                <div class="row">
+                    <div class="offset-lg-4 col-lg-8">
+                        <button id="button-login" type="button" class="btn btn-main btn-lg">
+                            <span class="lang lang-en">
+                                Log In
+                            </span>
+                            <span class="lang lang-id">
+                                Masuk Log
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3 registration-element hidden">
+            <div class="offset-lg-4 col-lg-4 align-center">
+                <button id="button-register" type="button" class="btn btn-main  btn-lg">
+                    <span class="lang lang-en">
+                        Submit
+                    </span>
+                    <span class="lang lang-id">
+                        Kirim
+                    </span>
+                </button>
+            </div>
+        </div>
+    </form>
+</main>
